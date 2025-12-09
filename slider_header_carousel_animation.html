@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AirPods Max Slider</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+
+<style>
+/* Enjoy!! 🍓 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { overflow-x: hidden; }
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+img { user-select: none; }
+
+.heading-style-2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 50px;
+  margin-bottom: 40px;
+}
+p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+  margin-bottom: 28px;
+}
+
+/* Main layout */
+.slider-main {
+  min-height: 700px;
+  background: radial-gradient(50% 50% at 50% 50%, #c7f6d0 0%, #7cb686 92.19%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* backgrounds */
+#backgrounds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Container */
+.container {
+  width: 50%;
+  padding-block: 100px;
+  max-width: 525px;
+  position: relative;
+  left: 5%;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.social-icons a {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.social-icons a:hover { background-color: #ffffff63; }
+.social-icons img { width: 22px; height: 22px; }
+
+/* Images */
+.slider-images {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.slider-images img {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  max-width: 593px;
+  max-height: 779px;
+  transform: translate(-50%, -50%) scale(0.3);
+  filter: blur(25px);
+  opacity: 0;
+  transition: 2s;
+}
+
+/* ACTIVE STATES */
+.slider-images img.active {
+  opacity: 1;
+  filter: blur(0);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.slider-images img.previous {
+  opacity: 1;
+  left: 95%;
+  top: 90%;
+  filter: blur(25px);
+}
+.slider-images img.next {
+  opacity: 1;
+  top: 10%;
+  left: 100%;
+  filter: blur(35px);
+  transform: translate(-50%, -50%) scale(0.3);
+}
+.slider-images img.inactive {
+  opacity: 0;
+  transform: translate(10%, 10%) scale(0.3);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .slider-main { flex-direction: column; }
+  .container { width: 100%; padding: 50px 25px; left: 0; }
+  .slider-images { width: 100%; }
+  .slider-images img.active { left: 20%; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Enjoy!! 🍓 -->
+<section class="slider-main">
+  <div class="container">
+    <div class="logo">
+      <a href="#"><img src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/logo.svg"></a>
+    </div>
+
+    <div class="slider-content-wrap">
+      <div class="slider-content">
+        <h2 class="heading-style-2">Apple AirPods Max Wireless Over-Ear Headphones.</h2>
+        <p>
+          Active Noise Cancelling, Spatial Audio, Transparency Mode, Digital Crown.
+        </p>
+        <h3 class="heading-style-2">$779.99</h3>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mdjamin_" target="_blank"><img src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/instagram-icon.svg"></a>
+          <a href="#"><img src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/facbook-icon.svg"></a>
+          <a href="https://x.com/MDJAmin_" target="_blank"><img src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/twiter-icon.svg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-images">
+    <img class="slider-image" src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/green.png">
+    <img class="slider-image" src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/blue.png">
+    <img class="slider-image" src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/red.png">
+    <img class="slider-image" src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/white.png">
+    <img class="slider-image" src="https://raw.githubusercontent.com/MDJAmin/apple-airpods-max-product-slider-html-css-js/main/assets/black.png">
+  </div>
+
+  <div id="backgrounds">
+    <div class="background" style="background: radial-gradient(#c7f6d0, #7cb686);"></div>
+    <div class="background" style="background: radial-gradient(#d1e4f6, #5f9ccf);"></div>
+    <div class="background" style="background: radial-gradient(#ffb7b2, #ed746e);"></div>
+    <div class="background" style="background: radial-gradient(#d7d7d7, #979797);"></div>
+    <div class="background" style="background: radial-gradient(#6b6b6b, #292929);"></div>
+  </div>
+</section>
+
+<script>
+// Enjoy!! 🍓
+"use strict";
+
+const backgrounds = document.querySelectorAll(".background");
+const slider = document.querySelector(".slider-images");
+const images = [...slider.children];
+
+let imageIndex = 0;
+
+function updateSlider() {
+  images.forEach(img => img.className = "");
+
+  images[imageIndex].classList.add("active");
+
+  images[(imageIndex - 1 + images.length) % images.length].classList.add("previous");
+  images[(imageIndex + 1) % images.length].classList.add("next");
+
+  images.forEach((img, i) => {
+    if (
+      i !== imageIndex &&
+      i !== (imageIndex - 1 + images.length) % images.length &&
+      i !== (imageIndex + 1) % images.length
+    )
+      img.classList.add("inactive");
+  });
+
+  backgrounds.forEach(bg => bg.style.opacity = 0);
+  backgrounds[imageIndex].style.opacity = 1;
+
+  imageIndex = (imageIndex + 1) % images.length;
+}
+
+updateSlider();
+setInterval(updateSlider, 3500);
+</script>
+
+</body>
+</html>
